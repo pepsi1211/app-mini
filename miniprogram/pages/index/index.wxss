@@ -1,0 +1,29 @@
+.player{
+  width: 88rpx;
+  height: 88rpx;
+  position: fixed;
+  top: 40rpx;
+  left: 40rpx;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0rpx 4rpx 20rpx 0rpx rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player.animation{
+  animation: rotate 3s linear infinite;
+}
+
+.player view{
+  font-size: 32rpx;
+  color: #999;
+}
+
+/* 声明动画 */
+@keyframes rotate {
+  100%{
+    transform: rotate(360deg);
+  }
+}

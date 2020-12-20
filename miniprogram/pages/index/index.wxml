@@ -1,0 +1,4 @@
+<!-- index.wxml -->
+<view class="player {{musicSwitch?'animation':''}}" bindtap="handleToSwitch">
+  <view class="iconfont icon-chongwutubiao16"></view>
+</view>
