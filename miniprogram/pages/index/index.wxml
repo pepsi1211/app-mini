@@ -1,4 +1,44 @@
 <!-- index.wxml -->
+<view class="main">
+	<!-- 自定义头部 -->
+	<view class="custom-nav" style="height: {{navbarHeight+'px'}}">
+		<view class="title" style=" top: {{statusBarHeight + 'px'}}; height: {{cusnavH + 'px'}}">
+			<view class="title-middle" style=" height: {{cusnavH + 'px' }}">
+				<view class="title-content">
+					<text class="text {{currentIndex==0?'on':''}}" bindtap="handleToTap" data-index="0">你的</text>
+					<text class="text {{currentIndex==1?'on':''}}" bindtap="handleToTap" data-index="1">我的</text>
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<!-- 轮播 -->
+	<swiper class="swiper" current="currentIndex" style="height:{{scrollViewHeight+'px'}}" bindchange="handleToChange">
+		<swiper-item>
+			<scroll-view scroll-y class="scroll-view" style="height:{{scrollViewHeight+'px'}}">
+				<view class="circle-box">
+					<view class="box-left">
+						<image class="avatar" src="https://wx4.sinaimg.cn/mw690/808296b0gy1gguaihwsmcj20u00u0nho.jpg"></image>
+					</view>
+					<view class="box-right">
+						<text class="nick-name">烦嘉丽</text>
+						<text class="remark">今天心情很好!</text>
+						<view class="photo-wall">
+							<block wx:for="{{testPhoto}}">
+								<image class="photo"  src="{{item}}" bindtap="handleToPreview" data-src="{{item}}"></image>
+							</block>
+						</view>
+					</view>
+				</view>
+			</scroll-view>
+		</swiper-item>
+		<swiper-item>
+			<scroll-view scroll-y class="scroll-view" style="height:{{scrollViewHeight+'px'}}">
+				111
+			</scroll-view>
+		</swiper-item>
+	</swiper>
+</view>
 <view class="player {{musicSwitch?'animation':''}}" bindtap="handleToSwitch">
-  <view class="iconfont icon-chongwutubiao16"></view>
+	<view class="iconfont icon-chongwutubiao16"></view>
 </view>

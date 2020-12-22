@@ -1,0 +1,20 @@
+<!--pages/upload/index.wxml-->
+	<!-- 自定义头部 -->
+	<view class="custom-nav" style="height: {{navbarHeight+'px'}}">
+		<view class="title" style=" top: {{statusBarHeight + 'px'}}; height: {{cusnavH + 'px'}}">
+			<view class="title-middle" style=" height: {{cusnavH + 'px' }}">
+				<view class="title-content">
+					<text class="text on">上传</text>
+				</view>
+			</view>
+		</view>
+	</view>
+
+<view class="main">
+	<textarea value="{{remark}}" confirm-type="done" class="remark" placeholder="此刻的心情..." placeholder-style="fontSize: 24rpx;color: #e8e8e8"></textarea>
+	<view class="action-sheet">
+		<view class="btn-upload" bindtap="handleToSelect">
+			<text class="iconfont icon-add"></text>
+		</view>
+	</view>
+</view>

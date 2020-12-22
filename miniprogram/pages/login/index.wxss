@@ -1,0 +1,25 @@
+/* pages/login/index.wxss */
+page{
+  background-color: #000;
+}
+
+.main{
+  width: 710rpx;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main .wechat{
+  color: #fff;
+  font-size: 160rpx;
+  margin: 360rpx 0 140rpx;
+}
+
+.btn-login{
+  background-color: #fff !important;
+  border-radius: 20px !important;
+  width: 400rpx !important;
+}
