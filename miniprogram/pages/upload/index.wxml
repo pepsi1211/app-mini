@@ -16,5 +16,8 @@
 		<view class="btn-upload" bindtap="handleToSelect">
 			<text class="iconfont icon-add"></text>
 		</view>
+		<view class="img-list" wx:for="{{imgList}}" wx:key="index">
+			<image src="{{item}}" mode="widthFix" class="photo"></image>
+		</view>
 	</view>
 </view>

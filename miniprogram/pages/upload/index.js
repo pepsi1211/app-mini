@@ -1,6 +1,6 @@
 // pages/upload/index.js
 const app = getApp()
-import { chooseImage } from '../../utils/utils'
+import { chooseImage, showToast } from '../../utils/utils'
 Page({
 
   /**
@@ -24,6 +24,10 @@ Page({
     chooseImage({count: 4}).then(res=>{
       var imgList = res.tempFilePaths;
       console.log(imgList);
+      showToast({title:'选择成功'})
+      this.setData({
+        imgList
+      })
     })
   }
 })
